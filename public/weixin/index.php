@@ -67,6 +67,7 @@ class wechatCallbackapiTest
                     <Content><![CDATA[%s]]></Content>
                     <FuncFlag>0</FuncFlag>
                     </xml>";
+    	
     	$contentStr = "【每日天气】"."\n"."微信号：6666"."\n"."温度：10C"."\n"."湿度：10";
     	$resultStr = sprintf($textTpl, $fromUsername, $toUsername, $time, $msgType, $contentStr);
     	echo $resultStr;
