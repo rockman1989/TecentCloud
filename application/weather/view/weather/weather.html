@@ -2,7 +2,7 @@
 <html class="ui-mobile">
 
 <head>
-  <base href="http://192.144.177.47/weixin/weather.html">
+  
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet">
@@ -21,15 +21,17 @@ $(document).ready(function(){
 });
 
 function search(){
-	let querie = 'http://192.144.177.47/index.php/api/weather/index?city=101010100'
+	let querie = 'weatherSearch?city=101010100'
   	$.getJSON(querie, function(data) {
-  		//alert(data);
-			var val = data[0]['val'];
+  		var a = eval("("+data[0]['weather']+")");
+  		console.log(a);
+  		//console.log(data[0]['weather']);
+			/*var val = data[0]['val'];
 			var weather = val.split("\r\n");
 			//alert(weather[0]);
 			$("#location").children("span").html(weather[0]); 
 			$("#icon-temp").children("p").html(weather[1]);
-			$("#sd").html(weather[2]);
+			$("#sd").html(weather[2]);*/
  		});
 }
 </script>

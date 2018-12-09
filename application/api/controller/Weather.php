@@ -15,5 +15,6 @@ class Weather
         //var_dump($res); die();
         return json($res);
     }
+    
 }
 ?>
